@@ -4,12 +4,15 @@
   "description": "A twitter bot to tweet promotional material about the Welltower series, by Lester Yocum",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "forever start -o out.log -e err.log bot.js",
+    "dev-start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "flist": "forever stop 0"
   },
   "author": "Benjamin Yocum",
   "license": "ISC",
   "dependencies": {
+    "forever": "^0.15.3",
     "twit": "^2.2.9"
   }
 }

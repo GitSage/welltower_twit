@@ -3,6 +3,8 @@ var Twitter = new twit(require('./config.js'));
 var currentTweetIndex = 0;
 var tweets = require('./tweets.json');
 
+console.log("Starting welltower-wiki");
+
 function postNextTweet() {
     if(currentTweetIndex >= tweets.length){
         console.log("Out of tweets after " + tweets.length + " tweets, starting over");
@@ -16,4 +18,5 @@ function postNextTweet() {
     });
 }
 
-setInterval(postNextTweet, 1000 * 60 * 10);
+// setInterval(postNextTweet, 1000 * 60 * 10);
+setInterval(postNextTweet, 1000);
