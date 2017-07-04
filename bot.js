@@ -18,5 +18,4 @@ function postNextTweet() {
     });
 }
 
-// setInterval(postNextTweet, 1000 * 60 * 10);
-setInterval(postNextTweet, 1000);
+setInterval(postNextTweet, 1000 * 60 * 10);
